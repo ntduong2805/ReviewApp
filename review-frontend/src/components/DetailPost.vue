@@ -49,11 +49,8 @@
         </div>
         <!-- DESCRIPTION -->
         <div class="row text-justify">
-            <p for="description">
-                <span class="font-weight-bold">Ngày khởi chiếu: </span> 
-                <em>{{film.description}}</em>
-            </p> 
-            
+            <p for="description" class="font-weight-bold">Nội dung:</p> 
+            {{film.description}}
         </div>
         <!-- IMAGEURL -->
         <div class="row">

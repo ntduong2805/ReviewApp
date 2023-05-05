@@ -48,7 +48,7 @@
             />
             <ErrorMessage name="address" class="error-feedback" /> 
         </div>
-
+        
         <!-- PHONE -->
         <div class="form-group"> 
             <label for="phone">Số điện thoại</label> 
@@ -60,17 +60,13 @@
             />
             <ErrorMessage name="phone" class="error-feedback" /> 
         </div>
-
+        
         <div class="form-group"> 
-            <button class="btn btn-primary">Đăng ký</button> 
-            <!-- <button 
-                v-if="userLocal._id" 
-                type="button" 
-                class="ml-2 btn btn-danger" 
-                @click="deleteFilm" 
-            > 
-                Xóa 
-            </button>  -->
+            <button class="btn btn-primary">Đăng ký</button>
+            <a class="btn btn-danger ml-2">
+                <router-link :to="{ name: 'film.login' }" class="text-white ml-1">Hủy</router-link>
+            </a>
+            
         </div> 
     </Form> 
 </template> 
@@ -78,13 +74,14 @@
 <script> 
 import * as yup from "yup"; 
 import { Form, Field, ErrorMessage } from "vee-validate"; 
+
 export default { 
     components: { 
         Form, 
         Field, 
         ErrorMessage, 
     },
-    emits: ["submit:user"], 
+    emits: ["submit:user"],
     props: { 
         user: { type: Object, required: true } 
     },
@@ -119,7 +116,7 @@ export default {
         return {
             // Chúng ta sẽ không muốn hiệu chỉnh props, nên tạo biến cục bộ 
             // userLocal để liên kết với các input trên form 
-            userLocal: this.user, 
+            userLocal: this.user,
             userFormSchema,
         }; 
     },

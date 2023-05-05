@@ -22,9 +22,9 @@ export default {
                         @click="detailActiveIndex(index)"
         >
             <div class="card rounded-lg shadow p-3 mb-4 bg-white" style="width: 18rem;">
-                <img :src="film.imageURL" class="card-img-top rounded-lg" alt="..." style="height: 200px;">
+                <img :src="film.imageURL" class="card-img-top rounded-lg" alt="..." style="height: 256px;">
                 <div class="card-body">
-                    <h5 class="card-title" style="height: 100px;">{{ film.name }}</h5>
+                    <h5 class="card-title" style="height: 64px;">{{ film.name }}</h5>
                     <router-link :to="{name:'film.detail', params: {id: film._id }}">
                         <button class="btn btn-primary"><i class="fa-solid fa-circle-info"></i> Xem thêm</button>
                     </router-link>

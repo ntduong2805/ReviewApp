@@ -74,7 +74,7 @@ import FilmList from "@/components/FilmList.vue";
 import FilmService from "@/services/Film.service";
 
 import FilmCardFrontEnd from "@/components/FilmCardFrontEnd.vue";
-import FilmListFrontEnd from "../components/FilmListFrontEnd.vue";
+import FilmListFrontEnd from "@/components/FilmListFrontEnd.vue";
 
 export default {
     components: {
