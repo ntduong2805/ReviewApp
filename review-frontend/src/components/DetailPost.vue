@@ -49,12 +49,15 @@
         </div>
         <!-- DESCRIPTION -->
         <div class="row text-justify">
-            <p for="description" class="font-weight-bold">Nội dung:</p> 
-            {{film.description}}
+            <p for="description">
+                <span class="font-weight-bold">Ngày khởi chiếu: </span> 
+                <em>{{film.description}}</em>
+            </p> 
+            
         </div>
         <!-- IMAGEURL -->
         <div class="row">
-            <img :src="film.imageURL" alt="">
+            <img :src="film.imageURL" alt="" style="height: 512px;">
         </div> 
     </div>
     <!-- </Form>  -->
